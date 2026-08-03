@@ -8,30 +8,26 @@ Ana Flutter projesini public repo’ya koymayın.
 Yayın sonrası (repo adı `ivme-legal` varsayımı):
 
 ```
-https://<GITHUB_KULLANICI>.github.io/ivme-legal/privacy.html
+https://yusuf0234.github.io/ivme-legal/privacy.html
 ```
 
 ## Yayın (ilk kurulum)
 
-GitHub’da **public** repo oluştur: `ivme-legal` (boş, README’siz).
-
-Sonra bu klasörde:
+1. GitHub’da **public** boş repo oluştur:  
+   https://github.com/new?name=ivme-legal&visibility=public  
+   (README / .gitignore / license ekleme)
+2. Bu klasör zaten commit’li; remote hazır. Terminal:
 
 ```bash
-cd site
-git init
-git add .
-git commit -m "İvme gizlilik ve kullanım koşulları"
-git branch -M main
-git remote add origin https://github.com/<GITHUB_KULLANICI>/ivme-legal.git
+cd H:\kpss_yeni\site
 git push -u origin main
 ```
 
-GitHub → **Settings → Pages**:
+3. Repo → **Settings → Pages** → Source: Deploy from a branch → `main` / `/` (root) → Save
+4. ~1 dk sonra Play’e yapıştır:
 
-1. Source: **Deploy from a branch**
-2. Branch: `main` / **root** (`/`)
-3. Save
+```
+https://yusuf0234.github.io/ivme-legal/privacy.html
+```
 
-1–2 dakika sonra URL açılır. Play Console → Gizlilik politikası alanına
-`privacy.html` adresini yapıştırın.
+Kullanıcı adın farklıysa: `git remote set-url origin https://github.com/<USER>/ivme-legal.git`
